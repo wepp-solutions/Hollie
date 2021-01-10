@@ -11,7 +11,6 @@ export default createGlobalStyle`
         height: 100vh;
         width: 100%;
         justify-content: center;
-        font-family: Raleway;
         color: #333;
     }
 `
