@@ -6,15 +6,16 @@ import {
   Logo,
   Link,
   IconsBox,
-  InstagramIcon,
-  TwitterIcon,
-  MenuIcon
+  IconDribbble,
+  IconInsta,
+  IconVimeo,
+  MenuIcon,
+  ModalContent
 } from "./styles";
 
 export default function NavBar() {
   const { pathname } = useRouter()
   const worksPage = pathname === "/" || pathname === "/Works"
-  const aboutPage = pathname === "/About"
   const contactsPage = pathname === "/Contacts"
   
   return (
@@ -22,15 +23,14 @@ export default function NavBar() {
       <Navs>
         <Logo>Hollie</Logo>
         <Link works={worksPage ? "true" : "false"} href="/Works">Trabalhos</Link>
-        <Link about={aboutPage ? "true" : "false"} href="/About">Sobre</Link>
         <Link about={contactsPage ? "true" : "false"} href="/Contacts">Contatos</Link>
       </Navs>
 
       <IconsBox>
-        <InstagramIcon />
-        <TwitterIcon />
+        <IconDribbble />
+        <IconInsta />
+        <IconVimeo />
       </IconsBox>
-      <MenuIcon />
     </Container>
   );
 }

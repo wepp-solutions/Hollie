@@ -1,39 +1,57 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 100%;
-  margin: 100px auto 10px auto;
-`;
-export const TitleTop = styled.p`
-    font-size: clamp(1.7rem, 5vw, 2rem);
-    width: min(700px, 100%);
-`
-export const Form = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-    width: min(700px, 100%);
+  align-items: center;
+  justify-content: center;
 
-    > label {
-        font-size: clamp(1rem, 5vw, 1.5rem);
-    }
-    > input {
-        background: #e9ecef;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-    > textarea {
-        background: #e9ecef;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        height: 200px;
-        resize: none;
-        padding: 10px 20px;
-    }
+  margin: 100px auto;
+  width: 95%;
+  height: 100%;
+`;
+export const Header = styled.div`
+    position: relative;
+    width: 100%;
+    height: 700px;
+`
+export const WrapperContact = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    margin: 40px 0;
+`
+export const Texts = styled.div`
+    ${props => props.one && css`
+        p:nth-child(1) {
+            font-size: clamp(1rem, 5vw, 1.1rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        p:nth-child(2) {
+            font-size: clamp(1.4rem, 5vw, 1.7rem);
+            font-weight: 600;
+            max-width: 400px;
+        }
+    `}
+    ${props => props.two && css`
+        max-width: 700px;
+
+        p {
+            font-size: clamp(1.4rem, 5vw, 1.5rem);
+        }
+        button {
+            color: #eee;
+            border: none;
+            outline: none;
+            padding: 10px 50px;
+            margin: 10px 0;
+            font-size: 18px;
+            background: #457b9d;
+
+        }
+    `}
 `

@@ -1,11 +1,8 @@
-import React from "react";
-
 import Document, { Html, Head, Main, NextScript } from "next/document";
-
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  static async getInitialProps() {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -30,18 +27,13 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
-
-  // Configurando Header global da aplicação
   render() {
     return (
-      <Html lang="pt">
+      <Html>
         <Head>
-          <meta charSet="utf-8" />
-          <link rel="stylesheet" href="https://use.typekit.net/xis2pgl.css" />
-
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>

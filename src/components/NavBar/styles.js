@@ -1,16 +1,17 @@
 import styled, { css } from "styled-components";
-import { FiInstagram, FiTwitter } from 'react-icons/fi'
+import { AiOutlineDribbble, AiOutlineInstagram } from 'react-icons/ai'
+import { FaVimeoV } from 'react-icons/fa'
 import { VscMenu } from 'react-icons/vsc'
 
 export const Container = styled.div`
   position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 2;
+  top: 0;
   display: flex;
   align-items: center;
+  padding: 1% 6%;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
 `;
 export const Navs = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ export const Navs = styled.div`
 `
 export const Logo = styled.p`
   font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 900;
   @media (min-width: 760px) {
     margin-right: 10px;
   }
@@ -43,28 +45,20 @@ export const Link = styled.a`
   `}
 `
 export const IconsBox = styled.div`
-  display: none;
-
-  @media (min-width: 760px) {
-    display: flex;
+  display: flex;
     align-items: center;
     gap: 10px;
-  }
 `
 
-const Icons = css`
-  font-size: 23px;
+const Icon = css`
+  font-size: 28px;
 `
-export const InstagramIcon = styled(FiInstagram)`
-  ${Icons}
+export const IconDribbble = styled(AiOutlineDribbble)`
+    ${Icon}
 `
-export const TwitterIcon = styled(FiTwitter)`
-  ${Icons}
+export const IconInsta = styled(AiOutlineInstagram)`
+    ${Icon}
 `
-export const MenuIcon = styled(VscMenu)`
-  font-size: 33px;
-
-  @media (min-width: 760px) {
-    display: none;
-  }
+export const IconVimeo = styled(FaVimeoV)`
+    ${Icon}
 `

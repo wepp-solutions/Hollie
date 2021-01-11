@@ -6,12 +6,18 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-
     body {
-        height: 100vh;
-        width: 100%;
+        min-height: 100%;
+        min-width: 100%;
         justify-content: center;
-        font-family: Raleway;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    button {
+        font-family: 'Poppins', sans-serif;
+    }
+    a {
+        text-decoration: none;
         color: #333;
     }
 `
